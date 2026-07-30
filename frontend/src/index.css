@@ -1,0 +1,93 @@
+/* ===================================================================
+   Design tokens — "Deed & Ledger"
+   A theme drawn from the Indian property-document world: cream survey
+   paper, ruled ledger lines, an oxblood ink for emphasis, and a brass
+   seal for the one moment that matters — the valuation itself.
+   =================================================================== */
+:root {
+  /* Color */
+  --color-paper: #faf6ee;
+  --color-paper-raised: #ffffff;
+  --color-ink: #21281f;
+  --color-ink-muted: #5b6155;
+  --color-rule: #ddd3bd;
+  --color-rule-strong: #c9bc9c;
+  --color-oxblood: #7a2e2e;
+  --color-oxblood-dark: #5e2222;
+  --color-brass: #a97a2b;
+  --color-brass-light: #f1e2c2;
+  --color-error: #a3311b;
+  --color-error-bg: #fbeae5;
+
+  /* Type */
+  --font-display: "Fraunces", "Iowan Old Style", serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", monospace;
+
+  /* Layout */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --shadow-card: 0 1px 2px rgba(33, 40, 31, 0.06), 0 12px 32px -16px rgba(33, 40, 31, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-paper);
+  background-image:
+    linear-gradient(var(--color-rule) 1px, transparent 1px);
+  background-size: 100% 2.1rem;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  margin: 0;
+  color: var(--color-ink);
+}
+
+a {
+  color: var(--color-oxblood);
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Visible keyboard focus everywhere, per accessibility floor */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-oxblood);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,13 @@
+# Raw dataset — large, and can be re-downloaded (see README → Dataset)
+notebooks/data/house_prices.csv
+
+# OS / editor cruft
+.DS_Store
+*.swp
+
+# Python bytecode (in case any scripts are run from the repo root)
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
